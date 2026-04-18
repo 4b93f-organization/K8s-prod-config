@@ -9,6 +9,8 @@ spec:
     repoURL: https://github.com/4b93f-organization/k8s-prod-config
     targetRevision: HEAD
     path: k8s
+    directory:
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: app
