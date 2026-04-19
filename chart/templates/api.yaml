@@ -23,6 +23,20 @@ spec:
             limits:
               cpu: {{ .Values.api.resources.limits.cpu | quote }}
               memory: {{ .Values.api.resources.limits.memory | quote }}
+          ports:
+            - containerPort: {{ .Values.api.service.port }}
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: {{ .Values.api.service.port }}
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: {{ .Values.api.service.port }}
+            initialDelaySeconds: 5
+            periodSeconds: 10
           env:
             {{- range $key, $value := .Values.api.env }}
             - name: {{ $key }}
