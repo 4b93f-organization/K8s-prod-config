@@ -19,4 +19,4 @@ jobs:
         run: helm lint chart/
 
       - name: Template render check
-        run: helm template k8s-prod chart/ --values chart/values.yaml > /dev/null
+        run: helm template k8s-log-processor chart/ --values chart/values.yaml > /dev/null
