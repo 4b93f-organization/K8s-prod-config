@@ -1,6 +1,6 @@
 # K8s-log-processor-config
 
-GitOps config repo for [K8s-log-processor](https://github.com/4b93f-organization/K8s-log-processor). ArgoCD watches this repo — push a change, the cluster updates automatically.
+GitOps config repo for [K8s-log-processor](https://github.com/4b93f/K8s-log-processor). ArgoCD watches this repo — push a change, the cluster updates automatically.
 
 ## How it works
 
